@@ -13,35 +13,44 @@ categories = ["embedded", "hardware-support"]
 # TODO: Add documentation site
 #documentation = "https://taks.github.io/esp32-nimble/esp32_nimble/index.html"
 
-[profile.release]
-opt-level = "s"
+# [profile.release]
+# opt-level = "s"
 
-[profile.dev]
-debug = true
-opt-level = "z"
+# [profile.dev]
+# debug = true
+# opt-level = "z"
 
-[features]
+# [features]
 
 [dependencies]
-log = { version = "0.4", default-features = false }
-esp-idf-sys = { version = "0.32.0", default-features = false }
-esp-idf-hal = { version = "0.40.0", default-features = false, features = ["critical-section", "embassy-sync"] }
-esp-idf-svc = { version = "0.45.0", default-features = false, features = ["alloc"] }
+# Workspace dependant
+# log = { version = "0.4", default-features = false }
+log = { workspace = true }
+# esp-idf-sys = { version = "0.32.0", default-features = false }
+esp-idf-sys = { workspace = true }
+# esp-idf-hal = { version = "0.40.0", default-features = false, features = ["critical-section", "embassy-sync"] }
+esp-idf-hal = { workspace = true, features = ["critical-section", "embassy-sync"] }
+# esp-idf-svc = { version = "0.45.0", default-features = false, features = ["alloc"] }
+esp-idf-svc = { workspace = true }
 embedded-svc = { version = "0.24.0", default-features = false }
+# embedded-svc = { workspace = true }
 
+futures = {workspace = true}
+
+# Specific to this crate
 bitflags = { version = "1.3.2" }
 critical-section = { version = "1.1.1" }
 embassy-sync = { version = "0.1.0" }
 once_cell = { version = "1.16.0", default-features = false, features = ["critical-section"] }
 uuid = { version = "1.2.2", default-features = false, features = ["macro-diagnostics"] }
 
-[dev-dependencies]
-esp-idf-sys = { version = "0.32.1", default-features = false, features = ["binstart", "alloc_handler"] }
-esp-idf-hal = { version = "0.40.1", default-features = false, features = ["critical-section", "edge-executor", "embassy-sync"] }
-esp-idf-svc = { version = "0.45.0", default-features = false, features = ["alloc", "embassy-time-driver", "embassy-time-isr-queue"] }
-embedded-hal = { version = "=1.0.0-alpha.9", default-features = false }
-thingbuf = { version = "0.1.3", default-features = false, features = ["alloc"] }
-embassy-time = { version = "0.1", features = ["tick-hz-1_000_000"] }
+# [dev-dependencies]
+# esp-idf-sys = { version = "0.32.1", default-features = false, features = ["binstart", "alloc_handler"] }
+# esp-idf-hal = { version = "0.40.1", default-features = false, features = ["critical-section", "edge-executor", "embassy-sync"] }
+# esp-idf-svc = { version = "0.45.0", default-features = false, features = ["alloc", "embassy-time-driver", "embassy-time-isr-queue"] }
+# embedded-hal = { version = "=1.0.0-alpha.9", default-features = false }
+# thingbuf = { version = "0.1.3", default-features = false, features = ["alloc"] }
+# embassy-time = { version = "0.1", features = ["tick-hz-1_000_000"] }
 
 [build-dependencies]
 embuild = "0.31.0"

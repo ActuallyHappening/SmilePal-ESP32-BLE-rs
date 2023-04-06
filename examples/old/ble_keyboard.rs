@@ -1,4 +1,9 @@
+// PLEASE NOTE: THIS IS AN OLD, BROKEN EXAMPLE!
+// DO NOT USE!
+
+// originall (2): https://github.com/taks/esp32-nimble/blob/develop/examples/ble_keyboard.rs
 // originally: https://github.com/T-vK/ESP32-BLE-Keyboard
+
 
 #![no_std]
 #![no_main]

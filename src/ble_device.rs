@@ -25,6 +25,12 @@ static mut BLE_ADVERTISING: Lazy<BLEAdvertising> = Lazy::new(BLEAdvertising::new
 pub static mut OWN_ADDR_TYPE: u8 = esp_idf_sys::BLE_OWN_ADDR_PUBLIC as _;
 static mut SYNCED: bool = false;
 
+/// A BLE device implementation
+/// To use this, you must call `BLEDevice::take()` to get a reference to the device.
+/// Example:
+/// ```rs
+/// let ble_device = BLEDevice::take();
+/// ```
 pub struct BLEDevice {
   security: BLESecurity,
 }
