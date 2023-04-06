@@ -52,12 +52,27 @@ impl BLEScan {
   }
 
   /// Set the interval to scan.
+	/// (Below docs are added with reduced certainty, see [this disclaimer](https://github.com/ActuallyHappening/SmilePal-ESP32-BLE-rs/blob/develop/DISCLAIMER.md))
+	/// 
+	/// When advertising, this is the interval between GAP advertisement packets.
+	/// A reasonable usage could be:
+	/// ```
+	/// ble_scan.interval(150);
+	/// ```
+	/// Other reasonable numbers are 20 and 2000 (20ms to 2s)
   pub fn interval(&mut self, interval_msecs: u16) -> &mut Self {
     self.scan_params.itvl = ((interval_msecs as f32) / 0.625) as u16;
     self
   }
 
   /// Set the window to actively scan.
+	/// (Below docs are added with reduced certainty, see [this disclaimer](https://github.com/ActuallyHappening/SmilePal-ESP32-BLE-rs/blob/develop/DISCLAIMER.md))
+	/// NO IDEA!
+	/// A reasonable usage could be:
+	/// ```
+	/// ble_scan.window(99);
+	/// ```
+	/// TODO: What does this do??
   pub fn window(&mut self, window_msecs: u16) -> &mut Self {
     self.scan_params.window = ((window_msecs as f32) / 0.625) as u16;
     self
