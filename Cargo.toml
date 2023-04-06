@@ -1,16 +1,17 @@
 [package]
-name = "esp32-nimble"
-version = "0.0.7"
-authors = ["taks <857tn859@gmail.com>"]
+name = "smilepal-esp32-ble"
+version = "0.1.0"
+authors = ["taks <857tn859@gmail.com>", "ActuallyHappening <105958073+ActuallyHappening@users.noreply.github.com>"]
 edition = "2021"
 resolver = "2"
 repository = "https://github.com/taks/esp32-nimble"
 license = "Apache-2.0"
-description = "A wrapper for the ESP32 NimBLE Bluetooth stack."
+description = "A documeted wrapper for the ESP32 NimBLE Bluetooth stack."
 readme = "README.md"
 keywords = ["bluetooth", "ble", "esp32", "embedded", "async"]
 categories = ["embedded", "hardware-support"]
-documentation = "https://taks.github.io/esp32-nimble/esp32_nimble/index.html"
+# TODO: Add documentation site
+#documentation = "https://taks.github.io/esp32-nimble/esp32_nimble/index.html"
 
 [profile.release]
 opt-level = "s"
