@@ -3,6 +3,8 @@
 #![allow(clippy::single_match)]
 #![feature(decl_macro)]
 
+/// Crate for integrating BLE into the ESP32
+
 extern crate alloc;
 
 #[doc(hidden)]
