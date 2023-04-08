@@ -1,5 +1,5 @@
 [package]
-name = "smilepal-esp32-ble"
+name = "smilepal-ble-esp32"
 version = "0.1.0"
 authors = ["taks <857tn859@gmail.com>", "ActuallyHappening <105958073+ActuallyHappening@users.noreply.github.com>"]
 edition = "2021"

@@ -1,5 +1,5 @@
 use log::info;
-use smilepal_esp32_ble::BLEDevice;
+use smilepal_ble_esp32::BLEDevice;
 use esp_idf_sys as _;
 use futures::executor::block_on;
 

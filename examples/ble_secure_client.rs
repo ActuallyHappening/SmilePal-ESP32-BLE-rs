@@ -1,7 +1,7 @@
 use std::{sync::Arc};
 
 use log::{info, warn};
-use smilepal_esp32_ble::{
+use smilepal_ble_esp32::{
   enums::*,
   utilities::{mutex::Mutex, BleUuid},
   BLEClient, BLEDevice,

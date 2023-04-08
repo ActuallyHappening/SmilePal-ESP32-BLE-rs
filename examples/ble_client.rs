@@ -6,7 +6,7 @@ extern crate alloc;
 use alloc::sync::Arc;
 use esp_idf_hal::delay::FreeRtos;
 // use embassy_time::{Duration, Timer};
-use smilepal_esp32_ble::{utilities::mutex::Mutex, uuid128, BLEClient, BLEDevice};
+use smilepal_ble_esp32::{utilities::mutex::Mutex, uuid128, BLEClient, BLEDevice};
 use esp_idf_sys as _;
 use futures::executor::block_on;
 use log::*;

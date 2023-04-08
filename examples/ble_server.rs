@@ -1,4 +1,4 @@
-use smilepal_esp32_ble::{uuid128, BLEDevice, NimbleProperties};
+use smilepal_ble_esp32::{uuid128, BLEDevice, NimbleProperties};
 use esp_idf_sys as _;
 
 fn main() {

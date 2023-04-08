@@ -1,4 +1,4 @@
-use smilepal_esp32_ble::{enums::*, utilities::BleUuid, BLEDevice, NimbleProperties};
+use smilepal_ble_esp32::{enums::*, utilities::BleUuid, BLEDevice, NimbleProperties};
 use esp_idf_sys as _;
 
 fn main() {
